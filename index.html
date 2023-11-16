@@ -19,11 +19,19 @@
         .contact-info, .personal-interests {
             font-style: italic;
         }
-        #top-right-content {
-            position: absolute;
-            top:  0;
-            right: 0;
-        }
+    #top-right-content {
+        position: relative;
+    }
+    img {
+        position: relative; /* or position: absolute; */
+        z-index: 1;
+        margin-top: 10px; /* Adjust as needed */
+        margin-right: 10px; /* Adjust as needed */
+    }
+    p {
+        position: relative;
+        z-index: 2;
+    }
     </style>
 </head>
 <body>
@@ -34,8 +42,14 @@
     <p>1301 Catherine St SPC 5615, Ann Arbor MI, 48109</p>
 </header>
 <div id="top-right-content">
-    <img src="MPHOTO-NeuroSciHds23(608).jpg" alt="" width="150" style="margin-top: 10px; margin-right: 10px;">
+    <div id="image-container">
+        <img src="MPHOTO-NeuroSciHds23(608).jpg" alt="" width="150">
+    </div>
+    <div id="text-container">
+        <p>Your text here</p>
+    </div>
 </div>
+
 <section>
     <h2>About Me</h2>
     <p style="margin-left: 1.5em; text-indent: -1.5em;">I'm a post-doctoral researcher at Diba Lab, focusing on sleep deprivation's impact on memory consolidation. My research involves analyzing extracellular records from the sleep-deprived rat hippocampus during learning.</p>
